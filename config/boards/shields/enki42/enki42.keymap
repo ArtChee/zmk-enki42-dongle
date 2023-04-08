@@ -143,7 +143,7 @@
 
                 adjust_layer {
 // .--------------------------------------------------------.       .------------------------------------------------------.
-// |  reset  |        |        |        |         |         |       |  DEF   |  GAME  |        |        |        |  reset  |
+// |         |        |        |        |         |         |       |  DEF   |  GAME  |        |        |        |         |
 // |---------+--------+--------+--------+---------+---------|       |--------+--------+--------+--------+--------+---------|
 // |         |  BT1   |  BT2   |  BT3   |  BT4    |  BT5    |       |  BT5   |  BT4   |  BT3   |  BT2   |  BT1   |         |
 // |---------+--------+--------+--------+---------+---------|       |--------+--------+--------+--------+--------+---------|
@@ -153,8 +153,8 @@
 //                             '--------+---------+---------'       '--------+--------+--------'
 
                         bindings = <
-   &sys_reset      &trans        &trans        &trans        &trans          &trans            &tog DEF      &tog GAME        &trans        &trans        &trans        &sys_reset
-   &sys_reset      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3    &bt BT_SEL 4      &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &trans
+   &trans      &trans        &trans        &trans        &trans          &trans            &tog DEF      &tog GAME        &trans        &trans        &trans        &trans
+   &trans      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3    &bt BT_SEL 4      &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &trans
    &bt BT_CLR  &trans        &trans        &trans        &trans          &trans            &trans        &trans        &trans        &trans        &trans        &bt BT_CLR
                              &trans        &trans        &trans                            &trans        &trans        &trans
                         >;
