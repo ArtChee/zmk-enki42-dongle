@@ -33,33 +33,31 @@
 };
 
 / {
-    macros {
-        numdot: numdot {
-            label = "ZM_numdot";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <40>;
-            tap-ms = <40>;
-            bindings
-                = <&macro_press   &kp LALT>    
-                , <&macro_tap     &kp KP_N4 &kp KP_N6>    
-                , <&macro_release &kp LALT>
-                ;
+    combos {
+        compatible = "zmk,combos";
+        combo_F2 {
+            timeout-ms = <50>;
+            key-positions = <0 1>;
+            bindings = <&kp F2>;
         };
-        grtsgn: grtsgn {
-            label = "ZM_grtsgn";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <40>;
-            tap-ms = <40>;
-            bindings
-                = <&macro_press   &kp LALT>    
-                , <&macro_tap     &kp KP_N6 &kp KP_N2>    
-                , <&macro_release &kp LALT>
-                ;
+        combo_ENTER {
+            timeout-ms = <50>;
+            key-positions = <3 4>;
+            bindings = <&kp ENTER>;
+        };
+         combo_BS {
+            timeout-ms = <50>;
+            key-positions = <4 5>;
+            bindings = <&kp BSPC>;
+        };
+        combo_Del {
+            timeout-ms = <50>;
+            key-positions = <28 29>;
+            bindings = <&kp DEL>;
         };
     };
 };
+
 / {
         keymap {
                 compatible = "zmk,keymap";
